@@ -35,14 +35,26 @@ var testUserResponse = function() {
 
     $(".answer").css("pointer-events", "none").css('box-shadow', 'none');
     // $(this).css("color", "#f2f2f2").css('box-shadow', '0 15px 20px -12px #354B5E');
-    $('.answer-feedback').append('<p class="wiki-desc">' + currentQuestion.answerFeedback + '</p>').append('<a class=link href=' + currentQuestion.link + ' target=_blank>' + '<p id=answer-source>' + currentQuestion.answerFeedbackSource + '</p>' + '</a>').fadeIn(1000);
+    $('.answer-feedback').append('<p class="wiki-desc">' + currentQuestion.answerFeedback + '</p>').append('<a class=link href=' + currentQuestion.link + ' target=_blank>' + '<p id=answer-source>' + currentQuestion.answerFeedbackSource + '</p>' + '</a>').fadeIn(750);
     // $('.correct-count').append('<p>' + correctCount + ' out of ' + (questionCount + 1) + ' correct.</p>');
     
+    if (questionCount == questions.length) {
+      $('.next-question').append('<p>See Results</p>');
+    }
+    else {
     $('.next-question').append('<p>' + 'Go to question ' + (questionCount + 1) + ' of ' + (questions.length)  + '</p>');
-    
+    }
+
     currentQuestion = questions[questionCount];
 
   });
+};
+
+var endOfQuestions = function() {
+  if (questionCount == questions.length) {
+    unpopulateItems();
+    $('.question').append('<p>Congratulations!  You finished the quiz.</p>');
+  }
 };
 
 var unpopulateItems = function() {
@@ -57,12 +69,18 @@ var unpopulateItems = function() {
 };
 
 var nextQuestion = function() {
+    if (questionCount == questions.length) {
+    unpopulateItems();
+    $('.answer-feedback').hide();
+    $('.question').append('<p class=finale>Congratulations!  You finished the quiz.</p>').append('<p class=finale>You got ' + correctCount + ' questions correct and missed ' + incorrectCount + '.</p>').append('<p class=try-again>Try Again?</p>');
+  }
+  else {
     unpopulateItems();
     populateItems();
-    $('.answer-feedback').fadeOut(1000);
+    $('.answer-feedback').fadeOut(750);
     testUserResponse();
+  }
 };
-
 
 $('.next-question').click( function() {
   nextQuestion();
