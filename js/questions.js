@@ -25,5 +25,32 @@ questions = [
     answerFeedback: "Yorkshire pudding is an English dish made from batter consisting of eggs, flour, and milk or water. The dish is sometimes served with beef and gravy and is a staple of the traditional British Sunday roast. It may also be served as a dessert.",
     answerFeedbackSource: "Wikipedia, the free encyclopedia",
     link: "https://en.wikipedia.org/wiki/Yorkshire_pudding"
+  },
+  { image: "assets/birm.jpg",
+    imageSource: "finedininglovers.com",
+    question: "Time to think about the British map.  Pictured above, this is the second largest city in England.",
+    answers: ["Bath", "Manchester", "Birmingham", "Liverpool"],
+    correctAnswer: 2,
+    answerFeedback: "Birminghamis a city and metropolitan borough in the West Midlands of England. It is the largest and most populous British city outside London, with a population in 2014 of 1,101,360",
+    answerFeedbackSource: "Wikipedia, the free encyclopedia",
+    link: "https://en.wikipedia.org/wiki/Birmingham"
+  },
+  { image: "assets/sandringham.jpg",
+    imageSource: "greatrail.com",
+    question: "A well known private home in the countryside, usually occupied around Christmas, what is the name of this home?",
+    answers: ["Sandringham House", "Castle of Mey", "Highgrove House", "Anmer Hall"],
+    correctAnswer: 0,
+    answerFeedback: "Sandringham House is near the village of Sandringham in Norfolk, England. The house is privately owned by Queen Elizabeth II and is located on the royal Sandringham Estate, which lies within the Norfolk Coast Area of Outstanding Natural Beauty.",
+    answerFeedbackSource: "Wikipedia, the free encyclopedia",
+    link: "https://en.wikipedia.org/wiki/Sandringham_House"
+  },
+  { image: "assets/sandringham.jpg",
+    imageSource: "greatrail.com",
+    question: "A well known private home in the countryside, usually occupied around Christmas, what is the name of this home?",
+    answers: ["Sandringham House", "Castle of Mey", "Highgrove House", "Anmer Hall"],
+    correctAnswer: 0,
+    answerFeedback: "Sandringham House is near the village of Sandringham in Norfolk, England. The house is privately owned by Queen Elizabeth II and is located on the royal Sandringham Estate, which lies within the Norfolk Coast Area of Outstanding Natural Beauty.",
+    answerFeedbackSource: "Wikipedia, the free encyclopedia",
+    link: "https://en.wikipedia.org/wiki/Sandringham_House"
   }
 ];
