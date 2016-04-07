@@ -8,8 +8,10 @@ var currentQuestion = questions[questionCount];  //why will this not update unle
 var populateItems = function() {
   $('.image').append('<img src= ' + currentQuestion.image + '>').append('<p>source: ' + currentQuestion.imageSource + '</p>');
   $('.question').append('<p>' + currentQuestion.question + '</p>');
-  $('.column-a').append('<p id=0 class="answer">' + currentQuestion.answers[0] + '</p>').append('<p id=1 class="answer">' + currentQuestion.answers[1] + '</p>');
-  $('.column-b').append('<p id=2 class="answer">' + currentQuestion.answers[2] + '</p>').append('<p id=3 class="answer">' + currentQuestion.answers[3] + '</p>');
+  $('.column-a').append('<p id=0 class="answer">' + currentQuestion.answers[0] + '</p>')
+                .append('<p id=1 class="answer">' + currentQuestion.answers[1] + '</p>');
+  $('.column-b').append('<p id=2 class="answer">' + currentQuestion.answers[2] + '</p>')
+                .append('<p id=3 class="answer">' + currentQuestion.answers[3] + '</p>');
   $('.answer-feedback').hide();
 };
 
@@ -35,7 +37,9 @@ var testUserResponse = function() {
 
     $(".answer").css("pointer-events", "none").css('box-shadow', 'none');
     // $(this).css("color", "#f2f2f2").css('box-shadow', '0 15px 20px -12px #354B5E');
-    $('.answer-feedback').append('<p class="wiki-desc">' + currentQuestion.answerFeedback + '</p>').append('<a class=link href=' + currentQuestion.link + ' target=_blank>' + '<p id=answer-source>' + currentQuestion.answerFeedbackSource + '</p>' + '</a>').fadeIn(750);
+    $('.answer-feedback').append('<p class="wiki-desc">' + currentQuestion.answerFeedback + '</p>')
+                         .append('<a class=link href=' + currentQuestion.link + ' target=_blank>' + '<p id=answer-source>' + currentQuestion.answerFeedbackSource + '</p>' + '</a>')
+                         .fadeIn(750);
     // $('.correct-count').append('<p>' + correctCount + ' out of ' + (questionCount + 1) + ' correct.</p>');
     
     if (questionCount == questions.length) {
@@ -54,7 +58,9 @@ var endOfQuestions = function() {
   if (questionCount == questions.length) {
     unpopulateItems();
     $('.answer-feedback').hide();
-    $('.question').append('<p class=finale>Congratulations! You finished the quiz.</p>').append('<p class=finale>You got ' + correctCount + ' questions correct and missed ' + incorrectCount + '.</p>').append('<p class=try-again>Try Again?</p>');
+    $('.question').append('<p class=finale>Congratulations! You finished the quiz.</p>')
+                  .append('<p class=finale>You got ' + correctCount + ' questions correct and missed ' + incorrectCount + '.</p>')
+                  .append('<p class=try-again>Try Again?</p>');
     // results();
     tryAgain();
   }
