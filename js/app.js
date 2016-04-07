@@ -39,7 +39,7 @@ var testUserResponse = function() {
     // $('.correct-count').append('<p>' + correctCount + ' out of ' + (questionCount + 1) + ' correct.</p>');
     
     if (questionCount == questions.length) {
-      $('.next-question').append('<p>See Results</p>');
+      $('.next-question').append('<p class=results>See Results</p>');
     }
     else {
     $('.next-question').append('<p>' + 'Go to question ' + (questionCount + 1) + ' of ' + (questions.length)  + '</p>');
@@ -53,7 +53,10 @@ var testUserResponse = function() {
 var endOfQuestions = function() {
   if (questionCount == questions.length) {
     unpopulateItems();
-    $('.question').append('<p>Congratulations!  You finished the quiz.</p>');
+    $('.answer-feedback').hide();
+    $('.question').append('<p class=finale>Congratulations! You finished the quiz.</p>').append('<p class=finale>You got ' + correctCount + ' questions correct and missed ' + incorrectCount + '.</p>').append('<p class=try-again>Try Again?</p>');
+    // results();
+    tryAgain();
   }
 };
 
@@ -71,8 +74,7 @@ var unpopulateItems = function() {
 var nextQuestion = function() {
     if (questionCount == questions.length) {
     unpopulateItems();
-    $('.answer-feedback').hide();
-    $('.question').append('<p class=finale>Congratulations!  You finished the quiz.</p>').append('<p class=finale>You got ' + correctCount + ' questions correct and missed ' + incorrectCount + '.</p>').append('<p class=try-again>Try Again?</p>');
+    endOfQuestions();
   }
   else {
     unpopulateItems();
@@ -81,6 +83,19 @@ var nextQuestion = function() {
     testUserResponse();
   }
 };
+
+// var results = function() {
+//   $('.results').click( function() {
+
+//   });
+// };
+
+var tryAgain = function() {
+  $('.try-again').click( function() {
+    location.reload(true);
+  });
+};
+
 
 $('.next-question').click( function() {
   nextQuestion();

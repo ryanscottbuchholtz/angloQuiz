@@ -31,7 +31,7 @@ questions = [
     question: "Time to think about the British map.  Pictured above, this is the second largest city in England.",
     answers: ["Bath", "Manchester", "Birmingham", "Liverpool"],
     correctAnswer: 2,
-    answerFeedback: "Birminghamis a city and metropolitan borough in the West Midlands of England. It is the largest and most populous British city outside London, with a population in 2014 of 1,101,360",
+    answerFeedback: "Birmingham is a city and metropolitan borough in the West Midlands of England. It is the largest and most populous British city outside London, with a population in 2014 of 1,101,360",
     answerFeedbackSource: "Wikipedia, the free encyclopedia",
     link: "https://en.wikipedia.org/wiki/Birmingham"
   },
@@ -47,7 +47,7 @@ questions = [
   { image: "assets/BD.jpg",
     imageSource: "theguardian.com",
     question: "The only British Prime Minister of Jewish birth, this man twice served during the reign of Queen Victoria.  Who is he?",
-    answers: ["Winston Churchhil", "William Gladstone", "William Lamb", "Benjamin Disraeli"],
+    answers: ["Winston Churchill", "William Gladstone", "William Lamb", "Benjamin Disraeli"],
     correctAnswer: 3,
     answerFeedback: "Benjamin Disraeli, 1st Earl of Beaconsfield, KG, PC, FRS (21 December 1804 to 19 April 1881) was a British politician and writer, who twice served as Prime Minister. He played a central role in the creation of the modern Conservative Party, defining its policies and its broad outreach.",
     answerFeedbackSource: "Wikipedia, the free encyclopedia",
