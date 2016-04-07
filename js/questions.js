@@ -44,13 +44,13 @@ questions = [
     answerFeedbackSource: "Wikipedia, the free encyclopedia",
     link: "https://en.wikipedia.org/wiki/Sandringham_House"
   },
-  { image: "assets/sandringham.jpg",
-    imageSource: "greatrail.com",
-    question: "A well known private home in the countryside, usually occupied around Christmas, what is the name of this home?",
-    answers: ["Sandringham House", "Castle of Mey", "Highgrove House", "Anmer Hall"],
-    correctAnswer: 0,
-    answerFeedback: "Sandringham House is near the village of Sandringham in Norfolk, England. The house is privately owned by Queen Elizabeth II and is located on the royal Sandringham Estate, which lies within the Norfolk Coast Area of Outstanding Natural Beauty.",
+  { image: "assets/BD.jpg",
+    imageSource: "theguardian.com",
+    question: "The only British Prime Minister of Jewish birth, this man twice served during the reign of Queen Victoria.  Who is he?",
+    answers: ["Winston Churchhil", "William Gladstone", "William Lamb", "Benjamin Disraeli"],
+    correctAnswer: 3,
+    answerFeedback: "Benjamin Disraeli, 1st Earl of Beaconsfield, KG, PC, FRS (21 December 1804 to 19 April 1881) was a British politician and writer, who twice served as Prime Minister. He played a central role in the creation of the modern Conservative Party, defining its policies and its broad outreach.",
     answerFeedbackSource: "Wikipedia, the free encyclopedia",
-    link: "https://en.wikipedia.org/wiki/Sandringham_House"
+    link: "https://en.wikipedia.org/wiki/Benjamin_Disraeli"
   }
 ];
