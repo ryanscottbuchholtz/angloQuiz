@@ -1,11 +1,10 @@
-var questionCount = 0;
-var correctCount = 0;
+var questionIndex = 0;
 var correctQuestions = [];
 var incorrectQuestions = [];
-var incorrectCount = 0;
-var currentQuestion = questions[questionCount];  //why will this not update unless placed in the testUserResponse function?
+
 
 var populateItems = function() {
+  var currentQuestion = questions[questionIndex];
   $('.image').append('<img src= ' + currentQuestion.image + '>').append('<p>source: ' + currentQuestion.imageSource + '</p>');
   $('.question').append('<p>' + currentQuestion.question + '</p>');
   $('.column-a').append('<p id=0 class="answer">' + currentQuestion.answers[0] + '</p>')
@@ -15,25 +14,31 @@ var populateItems = function() {
   $('.answer-feedback').hide();
 };
 
+var appendAnswers = function() {
+  for (i=0; i < currentQuestion.answers.length; i++) {
+    var html = $('answer-template').html.replace(/{{id}}/g, i).replace(/{{answer}}/g, currentQuestion.answers[i]);
+    $('.answers').append(html);
+  }
+};
+
 var testUserResponse = function() {
   $('.answers p').click( function() {
+    var currentQuestion = questions[questionIndex];
     var answerID = $(this).attr('id');
     if (answerID == currentQuestion.correctAnswer) {
-      correctCount += 1;
-      correctQuestions.push(questionCount);
+      correctQuestions.push(questionIndex);
       $('.answer').css({'background-color' : '#DCDDD8'});
       $(this).css({'background-color' : '#468966'});
       $('.answer-feedback').append('<p class="correct-incorrect correct">Correct!</p>');
     }
     else {
-      incorrectCount += 1;
-      incorrectQuestions.push(questionCount);
+      incorrectQuestions.push(questionIndex);
       $(".answer").css({"background-color" : "#DCDDD8"});
       $(this).css({"background-color" : "#D74B4B"});
       $('.answer-feedback').append('<p class="correct-incorrect incorrect">Incorrect</p>');
     }
 
-    questionCount +=1;
+    questionIndex +=1;
 
     $(".answer").css("pointer-events", "none").css('box-shadow', 'none');
     // $(this).css("color", "#f2f2f2").css('box-shadow', '0 15px 20px -12px #354B5E');
@@ -42,24 +47,23 @@ var testUserResponse = function() {
                          .fadeIn(750);
     // $('.correct-count').append('<p>' + correctCount + ' out of ' + (questionCount + 1) + ' correct.</p>');
     
-    if (questionCount == questions.length) {
+    if (questionIndex == questions.length) {
       $('.next-question').append('<p class=results>See Results</p>');
     }
     else {
-    $('.next-question').append('<p>' + 'Go to question ' + (questionCount + 1) + ' of ' + (questions.length)  + '</p>');
+    $('.next-question').append('<p>' + 'Go to question ' + (questionIndex + 1) + ' of ' + (questions.length)  + '</p>');
     }
 
-    currentQuestion = questions[questionCount];
 
   });
 };
 
 var endOfQuestions = function() {
-  if (questionCount == questions.length) {
+  if ((questionIndex) == questions.length) {
     unpopulateItems();
     $('.answer-feedback').hide();
     $('.question').append('<p class=finale>Congratulations! You finished the quiz.</p>')
-                  .append('<p class=finale>You got ' + correctCount + ' questions correct and missed ' + incorrectCount + '.</p>')
+                  .append('<p class=finale>You got ' + correctQuestions.length + ' questions correct and missed ' + incorrectQuestions.length + '.</p>')
                   .append('<p class=try-again>Try Again?</p>');
     // results();
     tryAgain();
@@ -78,7 +82,7 @@ var unpopulateItems = function() {
 };
 
 var nextQuestion = function() {
-    if (questionCount == questions.length) {
+    if ((questionIndex) == questions.length) {
     unpopulateItems();
     endOfQuestions();
   }
