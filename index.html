@@ -15,19 +15,37 @@
 
   <div class="question-wrapper">
     <div class="question-main">
-      <div class="image"></div>
-      <div class="question"></div>
-      <div class="answers">
-
-        <script id="answer-template" type="text/template">
-        <p id={{id}} class="answer">{{answer}}</p>
+      <div class="image">
+        <script id="image-template" type="text/template">
+          <img src={{image}} id="image">
+          <p id="source">source: {{imageSource}}</p>
         </script>
-        
-        <div class="column-a col"></div>
-        <div class="column-b col"></div>
+      </div>
+      <div class="question">
+        <script id="question-template" type="text/template">
+          <p id="question">{{question}}</p>
+        </script>
+      </div>
+      <div class="answers">
+        <script id="answer-template" type="text/template">
+          <p id={{id}} class="answer">{{answer}}</p>
+        </script>
       </div>
         <div class="answer-feedback">
-          <div class="next-question"></div>
+          <script id="answer-feedback-template" type="text/template">
+          <p class="correct-incorrect">{{right-wrong}}!</p>
+          </script>
+          <script id="answer-feedback-template-2">
+          <p class="wiki-desc">{{wiki-desc}}</p>
+            <a class="link" href={{link}} target="_blank">
+              <p id="answer-source">{{source}}</p>
+            </a>
+        </script>
+          <div class="next-question">
+            <script id="next-question-template" type="text/template">
+            <p id="next-button">{{button-message}}</p>
+            </script>
+          </div>
         </div>
     </div>
 
@@ -37,6 +55,7 @@
 
 <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
 <script src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+<script src="js/functions.js"></script>
 <script src="js/questions.js"></script>
 <script src="js/app.js"></script> 
 </body>
