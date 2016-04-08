@@ -62,7 +62,7 @@ questions = [
     answerFeedbackSource: "Wikipedia, the free encyclopedia",
     link: "https://en.wikipedia.org/wiki/Bath,_Somerset"
   },
-  { image: "assets/marysons.jpg",
+  { image: "assets/Marysons.jpg",
     imageSource: "forum.alexanderpalace.com",
     question: "The sister of two Kings and the daughter of one, this woman was known as whom?",
     answers: ["Victoria, Princess Royal", "Louise, Princess Royal and Duchess of Fife", "Anne, Princess Royal", "Mary, Princess Royal and Countess of Harewood"],
