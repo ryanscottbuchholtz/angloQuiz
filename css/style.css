@@ -173,11 +173,11 @@ header {
   text-align: right;
   font-size: .5em;
   color: darygrey;
-  font-style: italic;
+  
 }
 
 #answer-source:hover {
-  font-size: .7em;
+  font-style: italic;
 }
 
 .finale {

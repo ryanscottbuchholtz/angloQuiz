@@ -52,5 +52,32 @@ questions = [
     answerFeedback: "Benjamin Disraeli, 1st Earl of Beaconsfield, KG, PC, FRS (21 December 1804 to 19 April 1881) was a British politician and writer, who twice served as Prime Minister. He played a central role in the creation of the modern Conservative Party, defining its policies and its broad outreach.",
     answerFeedbackSource: "Wikipedia, the free encyclopedia",
     link: "https://en.wikipedia.org/wiki/Benjamin_Disraeli"
+  },
+  { image: "assets/bath.jpg",
+    imageSource: "holeinthedonut.com",
+    question: "Known for significant Roman architecture and as the home of writer Jane Austen, this town, 156km west of London, is: ",
+    answers: ["Bath", "Bristol", "Somerset", "Avon"],
+    correctAnswer: 0,
+    answerFeedback: "Bath is a city in the ceremonial county of Somerset, known for its Roman-built baths. In 2011, the population was 88,859. Bath is in the valley of the River Avon, 97 miles (156 km) west of London and 11 miles (18 km) south-east of Bristol. The city became a World Heritage Site in 1987.",
+    answerFeedbackSource: "Wikipedia, the free encyclopedia",
+    link: "https://en.wikipedia.org/wiki/Bath,_Somerset"
+  },
+  { image: "assets/marysons.jpg",
+    imageSource: "forum.alexanderpalace.com",
+    question: "The sister of two Kings and the daughter of one, this woman was known as whom?",
+    answers: ["Victoria, Princess Royal", "Louise, Princess Royal and Duchess of Fife", "Anne, Princess Royal", "Mary, Princess Royal and Countess of Harewood"],
+    correctAnswer: 3,
+    answerFeedback: "Mary, Princess Royal and Countess of Harewood (Victoria Alexandra Alice Mary; 25 April 1897 to 28 March 1965) was a member of the British Royal Family; she was the third child and only daughter of King George V and Queen Mary. Two of her brothers ruled as King, though one for less than a year.",
+    answerFeedbackSource: "Wikipedia, the free encyclopedia",
+    link: "https://en.wikipedia.org/wiki/Mary,_Princess_Royal_and_Countess_of_Harewood"
+  },
+  { image: "assets/spice-island.jpg",
+    imageSource: "tripadvisor.com",
+    question: "Once part of the British Empire, India and it's food are quite popular in England.  When in London, where does one go to find the highest concentration of curry houses?",
+    answers: ["Kensington", "Brick Lane", "Mayfair", "Westminster"],
+    correctAnswer: 1,
+    answerFeedback: "Brick Lane is a street in east London in the Borough of Tower Hamlets. Today, it is the heart of the city's Bangladeshi-Sylheti community and is known to some as Banglatown. It is famous for its many curry houses.",
+    answerFeedbackSource: "Wikipedia, the free encyclopedia",
+    link: "https://en.wikipedia.org/wiki/Brick_Lane"
   }
 ];
