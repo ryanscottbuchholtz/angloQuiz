@@ -4,7 +4,7 @@ questions = [
     question: "Let's start easy! What building is this?",
     answers: ["Windsor Castle", "Westminster Abbey", "Buckingham Palace", "Marlborough House"],
     correctAnswer: 2,
-    answerFeedback: "Buckingham Palace is the London residence and principal workplace of the reigning monarch of the United Kingdom. Located in the City of Westminster, the palace is often at the centre of state occasions and royal hospitality. It has been a focus for the British people at times of national rejoicing.",
+    answerFeedback: "Buckingham Palace is the London residence and principal workplace of the reigning monarch of the United Kingdom. Located in the City of Westminster, the palace is often at the centre of state occasions and royal hospitality.",
     answerFeedbackSource: "Wikipedia, the free encyclopedia",
     link: "https://en.wikipedia.org/wiki/Buckingham_Palace"
   },

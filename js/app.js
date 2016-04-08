@@ -91,9 +91,11 @@ var endOfQuestions = function() {
   if ((questionIndex) == questions.length) {
     unpopulateItems();
     $('.answer-feedback').hide();
-    $('.question').append('<p class=finale>Congratulations! You finished the quiz.</p>')
-                  .append('<p class=finale>You got ' + correctQuestions.length + ' questions correct and missed ' + incorrectQuestions.length + '.</p>')
-                  .append('<p class=try-again>Try Again?</p>');
+    var html = $('#question-template2').html()
+                                      .replace(/{{congrats}}/g, 'Congratulations! You finished the quiz.')
+                                      .replace(/{{correct-count}}/g, 'You got ' + correctQuestions.length + ' question(s) correct and missed ' + incorrectQuestions.length + '.')
+                                      .replace(/{{reboot}}/g, 'Try Again?');
+    $('.question').append(html);
     tryAgain();
   }
 };
